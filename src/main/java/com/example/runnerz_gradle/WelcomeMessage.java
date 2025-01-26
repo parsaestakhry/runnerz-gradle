@@ -1,4 +1,5 @@
-package foo;
+package com.example.runnerz_gradle;
+
 
 import org.springframework.stereotype.Component;
 
