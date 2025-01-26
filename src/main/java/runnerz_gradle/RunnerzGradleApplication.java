@@ -1,4 +1,4 @@
-package com.example.runnerz_gradle;
+package runnerz_gradle;
 
 
 import org.slf4j.LoggerFactory;
