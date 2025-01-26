@@ -23,7 +23,7 @@ public class RunnerzGradleApplication {
 
 	@Bean
 	CommandLineRunner runner() {
-		return args -> {
+		return _ -> {
 
 			Run run = new Run(1, "Morning Run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 5,
 					Location.Outdoor);
