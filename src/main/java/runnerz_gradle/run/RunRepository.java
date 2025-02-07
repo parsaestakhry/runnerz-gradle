@@ -22,7 +22,8 @@ public class RunRepository {
     }
 
     Run findById(Integer i) {
-        return runs.stream().filter(run -> run.id().equals(i)).findFirst().orElse(null);
+        System.out.println(i);
+        return runs.stream().filter(run -> run.id() == i).findFirst().get();
     }
 
     
