@@ -3,6 +3,7 @@ package runnerz_gradle.run;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -21,9 +22,9 @@ public class RunRepository {
         runs.add(new Run(1, "Morning Run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 5, Location.Outdoor));
     }
 
-    Run findById(Integer i) {
+    Optional<Run> findById(Integer i) {
         System.out.println(i);
-        return runs.stream().filter(run -> run.id() == i).findFirst().get();
+        return runs.stream().filter(run -> run.id() == i).findFirst();
     }
 
     
