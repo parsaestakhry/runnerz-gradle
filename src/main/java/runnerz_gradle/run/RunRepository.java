@@ -27,6 +27,16 @@ public class RunRepository {
         return runs.stream().filter(run -> run.id() == i).findFirst();
     }
 
+
+
+
+    // create a new run
+    void createRun(Run run) {
+        runs.add(run);
+    }
+
+
+
     
 
 }
