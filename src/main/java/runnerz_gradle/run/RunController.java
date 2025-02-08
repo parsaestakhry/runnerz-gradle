@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 
 
@@ -37,7 +36,7 @@ public class RunController {
     Run findById(@PathVariable("id") Integer id) {
         Optional<Run> run = runRepository.findById(id);
         if (run.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Run not found");
+            throw new RunNotFoundException();
         } else {
             return run.get();
         }
