@@ -6,12 +6,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import runnerz_gradle.run.Location;
 import runnerz_gradle.run.Run;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class RunnerzGradleApplication {
 
 	private static final org.slf4j.Logger log = LoggerFactory.getLogger(RunnerzGradleApplication.class);
